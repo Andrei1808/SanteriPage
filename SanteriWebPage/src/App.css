@@ -1,7 +1,10 @@
+@import "../src/styles/constants.scss";
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h1,
@@ -37,3 +40,4 @@ div:focus{
     border: none;
     cursor: pointer;
  }
+ 
