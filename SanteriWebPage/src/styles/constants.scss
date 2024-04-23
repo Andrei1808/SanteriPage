@@ -14,6 +14,8 @@ $desktop1440_subtitles_subtitle3_size: 16px;
 $desktop1440_bodyText_body1_size: 20px;
 $desktop1440_bodyText_body2_size: 16px;
 
+$button_big_size: 40px;
+
 // -------------------------------------------FONT-WEIGHT------------------------------------------------------
 $desktop1440_headings_h1_weight: 800;
 $desktop1440_headings_h2_weight: 700;
@@ -45,6 +47,7 @@ $desktop1440_bodyText_body3_lineHeight: 22px;
 
 // -------------------------------------------LETTER SPACING------------------------------------------------------
 $letter_spacing_title1: 3px;
+$letter_spacing_title2: 2px;
 
 // -------------------------------------------FONT-FAMILY------------------------------------------------------
 
@@ -58,3 +61,5 @@ $wrapper_max-width: 1440px;
 // -------------------------------------------COLORS------------------------------------------------------
 
 $dark_yellow: rgba(255, 222, 17, 1);
+$foggy_white: #ded0d0;
+$deep_blue: rgba(3, 100, 147, 1)

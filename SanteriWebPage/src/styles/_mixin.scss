@@ -1,0 +1,24 @@
+@import "../styles/constants.scss";
+
+@mixin button_big($color, $bg) {
+  display: flex;
+  font-family: $font_family_Gill-Sans;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: $letter_spacing_title2;
+  background-color: $bg;
+  color: $color;
+  font-size: $button_big_size;
+  font-weight: $desktop1440_subtitles_subtitle1_weight;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 3rem;
+  border-radius: 1.25rem;
+}
+
+@mixin hoverScale($color,$bg){
+    background-color:  $bg;
+    color:  $color;
+   transition-duration: .4s;
+   scale: .95;
+}
