@@ -1,5 +1,50 @@
 @import "../../styles/constants.scss";
+@import "../../styles/mixin";
 
-.s{
-    font-size: $desktop1440_headings_h1_size;
+
+.home{
+  max-width: $wrapper_max-width;
+  margin: 0 auto;
+}
+.wrapper {
+  width: 100%;
+  height: 80vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../../assets/images/a38016_925a0d8e71a44716a65d95ec04e80fe6.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-transform: uppercase;
+  margin: 3rem;
+}
+
+.title {
+  color: $foggy_white;
+  font-size: $desktop1440_headings_h3_size;
+  letter-spacing: $letter_spacing_title2;
+}
+
+.phoneNumber {
+  font-size: $desktop1440_headings_h2_size;
+  font-weight: $desktop1440_headings_h3_weight;
+  color: $dark_yellow;
+}
+
+.phoneNumberBtn {
+  @include button_big($dark_yellow, $deep_blue);
+  font-size: $desktop1440_headings_h5_size;
+  font-weight: $desktop1440_headings_h5_weight;
+
+  &:hover {
+    @include hoverScale($deep_blue ,$dark_yellow);
+  }
 }
