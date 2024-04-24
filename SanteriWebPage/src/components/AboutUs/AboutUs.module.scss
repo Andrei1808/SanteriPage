@@ -1,0 +1,39 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixin";
+
+.parallaxContainer {
+  height: 100%;
+  width: 100%;
+  min-height: 75vh;
+  background-image: url("../../assets/images/aboutsus-bg.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+    padding: 3rem 1rem;
+}
+
+.info{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0,0,.5);
+}
+
+.title {
+@include sectionTitle($dark_yellow)
+}
+
+.description {
+  width: 80%;
+  margin: 0 auto;
+  font-size: $desktop1440_subtitles_subtitle1_size;
+  letter-spacing: $letter_spacing_title3;
+  color: $foggy_white;
+  text-align: center;
+  line-height: $desktop1440_bodyText_body2_lineHeight;
+}
