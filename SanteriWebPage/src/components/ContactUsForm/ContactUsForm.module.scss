@@ -1,0 +1,61 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixin";
+
+.contactUsForm {
+  padding: 3rem 1rem;
+  background-color: $deep_blue;
+}
+
+.formBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formItem {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  text-transform: capitalize;
+  font-size: $desktop1440_subtitles_subtitle1_size;
+  border: transparent;
+
+  &:hover {
+    outline: 0.2rem solid $dark_yellow;
+  }
+
+  &:focus {
+    outline: 0.2rem solid $dark_yellow;
+  }
+}
+
+.formTextarea {
+  height: 300px;
+}
+
+.formBtn {
+  @include button_big($deep_blue, $dark_yellow);
+  text-transform: capitalize;
+  border: 0.125rem solid transparent;
+
+  &:hover {
+    @include hoverScale($dark_yellow, $deep_blue);
+    border: 0.125rem solid $dark_yellow;
+  }
+}
+
+.title {
+  @include sectionTitle($dark_yellow);
+}
+
+.formTextarea {
+  resize: none;
+}
