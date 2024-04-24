@@ -1,5 +1,11 @@
 @import "../../styles/constants.scss";
+@import "../../styles/mixin";
 
-.services{
-background-color: red;
+.services {
+  padding: 3rem 1rem;
+  background-color: $deep_blue;
+}
+
+.title {
+  @include sectionTitle($dark_yellow);
 }

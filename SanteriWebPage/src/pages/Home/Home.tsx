@@ -3,6 +3,8 @@ import s from "./Home.module.scss";
 import { NavLink } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Services from "../../components/Services/Services";
+import AboutUs from "../../components/AboutUs/AboutUs";
+import ContactUsForm from "../../components/ContactUsForm/ContactUsForm";
 
 
 export default function Home() {
@@ -22,6 +24,8 @@ export default function Home() {
         </div>
       </div>
       <Services />
+      <AboutUs />
+      <ContactUsForm/>
     </section>
   );
 }
