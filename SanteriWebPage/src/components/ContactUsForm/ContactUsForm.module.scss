@@ -45,6 +45,7 @@
   @include button_big($deep_blue, $dark_yellow);
   text-transform: capitalize;
   border: 0.125rem solid transparent;
+  margin-top: 1.5rem;
 
   &:hover {
     @include hoverScale($dark_yellow, $deep_blue);

@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import s from "./ContactUsForm.module.scss";
+import Button from "../Button/Button";
 
 type FormValues = {
   firstName: string;
@@ -45,14 +46,14 @@ export default function ContactUsForm() {
         <div className={s.formItem}>
           <textarea
             className={s.formTextarea}
-            placeholder="viesti"
+            placeholder="viesti..."
             {...register("message")}
           />
         </div>
         <div className={s.formItem}>
-          <button className={s.formBtn} type="submit">
-            lähetä
-          </button>
+          <Button className={s.formBtn} type="submit">
+            Lähetä
+          </Button>
         </div>
       </form>
     </section>
