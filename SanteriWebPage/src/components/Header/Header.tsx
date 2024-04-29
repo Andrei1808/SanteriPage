@@ -1,20 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import s from "./Header.module.scss";
 import logo from "../../assets/images/logo.png";
+import clsx from "clsx";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
   const [showScroll, setShowScroll] = useState(true);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const lastScrollTop = useRef(0);
 
   const handleScroll = () => {
     const currentScrollTop = window.scrollY;
-    currentScrollTop > lastScrollTop
+
+    currentScrollTop > lastScrollTop.current
       ? setShowScroll(false)
       : setShowScroll(true);
 
-    setLastScrollTop(currentScrollTop);
+    lastScrollTop.current = currentScrollTop;
+    console.log(lastScrollTop.current);
   };
 
   useEffect(() => {
@@ -24,7 +27,13 @@ export default function Header() {
 
   return (
     showScroll && (
-      <header className={s.header}>
+      <header
+        className={clsx({
+          [s.header]: true,
+          [s.down]: showScroll,
+
+        })}
+      >
         <div className={s.wrapper}>
           <div className={s.logo}>
             <NavLink to="home">
