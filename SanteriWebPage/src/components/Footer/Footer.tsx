@@ -7,7 +7,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <section className={s.footer}>
+    <footer className={s.footer}>
       <div className={s.wrapper}>
         <div className={s.info}>
           <div className={s.phone}>
@@ -41,6 +41,6 @@ export default function Footer() {
           </p>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
