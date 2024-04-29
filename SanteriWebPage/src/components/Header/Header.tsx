@@ -12,7 +12,7 @@ export default function Header() {
   const handleScroll = () => {
     const currentScrollTop = window.scrollY;
 
-    currentScrollTop > lastScrollTop.current
+   ( currentScrollTop > lastScrollTop.current) && (currentScrollTop>115)
       ? setShowScroll(false)
       : setShowScroll(true);
 
