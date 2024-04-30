@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "../pages/Home/Home";
-import ServicesPage from "../pages/Services/ServicesPage";
+import ServicesPage from "../pages/ServicesPage/ServicesPage";
 
 
 export default function Routers() {
