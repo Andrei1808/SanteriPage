@@ -1,0 +1,22 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixin";
+
+
+.title{
+
+@include sectionTitle($dark_yellow)
+}
+
+.subtitle{
+font-size: $desktop1440_subtitles_subtitle1_size;
+color: $foggy_white;
+letter-spacing: $letter_spacing_title2;
+text-align: center;
+padding-bottom: 1rem;
+}
+
+.servicesPage {
+  max-width: $wrapper_max-width;
+  margin: 0 auto;
+  background-color: rgba($deep_blue, 0.9);
+}
