@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./ServicesPage.module.scss";
 import ServicesPageCards from "./ServicesPageCards/ServicesPageCards";
+import Values from "./Values/Values";
 
 export default function ServicesPage() {
     return (
@@ -10,7 +11,8 @@ export default function ServicesPage() {
           Palvelumme kattavat laajan valikoiman: pienkorjauksista, sivous, tietokoneiden
           huoltoon ja valvontakamerajärjestelmien asennukseen.
         </h4>
-        <ServicesPageCards/>
+        <ServicesPageCards />
+        <Values/>
       </section>
     );
 }
