@@ -5,9 +5,9 @@
   width: 100%;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 40%);
-  gap: 4rem;
-
+  column-gap: 2rem;
   padding: 2rem;
+  align-content: space-evenly;
 }
 
 .img {
@@ -32,7 +32,7 @@
   }
 
   &:hover {
-    scale: 0.97;
+    scale: 0.99;
     cursor: pointer;
   }
 
@@ -57,7 +57,7 @@
 .icon {
   padding: 1rem;
   border-radius: 50%;
-   background-color: rgba($deep_blue, 0.9);
+  background-color: rgba($deep_blue, 0.9);
   z-index: 0;
 }
 
