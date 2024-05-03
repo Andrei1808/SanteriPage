@@ -2,7 +2,7 @@
 
 @mixin button_big($color, $bg) {
   display: flex;
-  font-family: $font_family_Gill-Sans;
+  font-family: $font_family_PoetsenOne;
   align-items: center;
   justify-content: center;
   letter-spacing: $letter_spacing_title2;
@@ -33,6 +33,7 @@
   font-size: $desktop1440_headings_h2_size;
   font-weight: $desktop1440_subtitles_subtitle1_weight;
   letter-spacing: $letter_spacing_title2;
+  font-family: $font_family_PoetsenOne;
   text-transform: uppercase;
   color: $color;
   text-align: center;
