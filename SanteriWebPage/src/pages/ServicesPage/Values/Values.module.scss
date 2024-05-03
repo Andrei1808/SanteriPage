@@ -1,0 +1,90 @@
+@import "../../../styles/constants.scss";
+@import "../../../styles/mixin";
+
+.values {
+  padding-bottom: 3rem;
+}
+
+.title {
+  @include sectionTitle($dark_yellow);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.valuesItems {
+  padding: 2rem 0;
+}
+
+.valuesItem {
+  font-size: $desktop1440_headings_h4_size;
+  color: $foggy_white;
+  letter-spacing: $letter_spacing_title2;
+  text-align: left;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding: 1rem 2rem;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    color: ($dark_yellow);
+  }
+
+  &:hover:before {
+    content: "";
+    width: calc(100% - 4rem);
+    height: 0.125rem;
+    background-color: ($dark_yellow);
+    animation: underlining 0.5s ease;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.itemTitle {
+  position: relative;
+  text-transform: uppercase;
+  font-family: $font_family_PoetsenOne;
+
+  span {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.valuesDescription {
+  color: ($dark_yellow);
+  font-size: $desktop1440_subtitles_subtitle1_size;
+  letter-spacing: $letter_spacing_title3;
+  padding: 3rem;
+  text-align: center;
+  line-height: $desktop1440_bodyText_body2_lineHeight;
+}
+
+.openDescription {
+  animation: open 1s ease 0s 1 normal forwards;
+}
+
+@keyframes underlining {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: rotateX(-100deg);
+    transform-origin: top;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+}
