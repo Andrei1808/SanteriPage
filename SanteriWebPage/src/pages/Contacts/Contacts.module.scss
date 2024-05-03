@@ -1,0 +1,61 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixin";
+
+.contacts {
+}
+
+.container {
+  padding-bottom: 3rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  max-width: $wrapper_max-width;
+  margin: 0 auto;
+  background-color: rgba($deep_blue, 0.9);
+}
+
+.title{
+    @include sectionTitle($dark_yellow)
+}
+
+.contactsItems {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 40%;
+  padding-left: 2rem;
+
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.125rem solid $dark_yellow;
+    padding: 1rem;
+    border-radius: 50%;
+
+}
+
+.contactsItem {
+  font-size: $desktop1440_subtitles_subtitle1_size;
+  color: $dark_yellow;
+  letter-spacing: $letter_spacing_title3;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+
+
+  &:active{
+    scale: 0.99;
+  }
+  
+  &:hover .icon{
+    background-color: rgba($dark_yellow,.3);
+  }
+}
+
+.form {
+  width: 60%;
+}
