@@ -1,6 +1,6 @@
-// -------------------------------------------FONT-SIZE------------------------------------------------------
-
-$desktop1440_headings_h1_size: 56px;
+@import "./fonts.scss";
+  // -------------------------------------------FONT-SIZE------------------------------------------------------
+  $desktop1440_headings_h1_size: 56px;
 $desktop1440_headings_h2_size: 56px;
 $desktop1440_headings_h3_size: 40px;
 $desktop1440_headings_h4_size: 36px;
@@ -40,7 +40,6 @@ $desktop1440_headings_h6_lineHeight: 28px;
 $desktop1440_subtitles_subtitle1_lineHeight: 50px;
 $desktop1440_subtitles_subtitle2_lineHeight: 40px;
 
-
 $desktop1440_bodyText_body1_lineHeight: 34px;
 $desktop1440_bodyText_body2_lineHeight: 30px;
 $desktop1440_bodyText_body3_lineHeight: 22px;
@@ -52,8 +51,10 @@ $letter_spacing_title3: 1px;
 
 // -------------------------------------------FONT-FAMILY------------------------------------------------------
 
-$font_family_Gill-Sans:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+$font_family_Gill-Sans: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+  sans-serif;
+$font_family_Dancing_Script: "DancingScript", sans-serif;
+$font_family_PoetsenOne: "PoetsenOne", sans-serif;
 
 // -------------------------------------------MAX-WIDTH------------------------------------------------------
 
@@ -64,4 +65,3 @@ $wrapper_max-width: 1440px;
 $dark_yellow: rgb(250, 229, 88);
 $foggy_white: #ded0d0;
 $deep_blue: rgba(3, 100, 147, 1);
-
