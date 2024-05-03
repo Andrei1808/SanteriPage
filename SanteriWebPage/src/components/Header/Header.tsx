@@ -17,7 +17,6 @@ export default function Header() {
       : setShowScroll(true);
 
     lastScrollTop.current = currentScrollTop;
-    console.log(lastScrollTop.current);
   };
 
   useEffect(() => {
