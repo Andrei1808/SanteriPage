@@ -1,8 +1,7 @@
 @import "../../styles/constants.scss";
 @import "../../styles/mixin";
 
-
-.home{
+.home {
   max-width: $wrapper_max-width;
   margin: 0 auto;
 }
@@ -44,7 +43,11 @@
   font-size: $desktop1440_headings_h5_size;
   font-weight: $desktop1440_headings_h5_weight;
 
+  a {
+    font-family: $font_family_PoetsenOne;
+  }
+
   &:hover {
-    @include hoverScale($deep_blue ,$dark_yellow);
+    @include hoverScale($deep_blue, $dark_yellow);
   }
 }
