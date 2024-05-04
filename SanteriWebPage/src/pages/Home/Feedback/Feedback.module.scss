@@ -1,0 +1,50 @@
+@import "../../../styles/constants.scss";
+@import "../../../styles/mixin";
+
+.feedback {
+  max-width: $wrapper_max-width;
+  background-color: rgba($foggy_white, .9);
+  color: $deep_blue;
+  padding-bottom: 5rem;
+}
+
+.title {
+  @include sectionTitle($dark_yellow);
+}
+
+.feedbackItems {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  text-align: center;
+}
+
+.feedbackItem {
+  font-size: $desktop1440_bodyText_body1_size;
+  letter-spacing: $letter_spacing_title3;
+  width: 30%;
+}
+
+.feedbackItem:nth-child(2) {
+  padding-top: 5rem;
+}
+
+.icon{
+    font-size: $desktop1440_headings_h2_size;
+}
+
+.feedbackText {
+    position: relative;
+    padding-bottom: 2rem;
+   
+}
+
+.feedbackAuthor {
+  font-size: $desktop1440_subtitles_subtitle1_size;
+  font-weight: $desktop1440_subtitles_subtitle1_weight;
+  letter-spacing: $letter_spacing_title3;
+  
+  position: absolute;
+  top: 100%;
+
+}
