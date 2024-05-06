@@ -5,7 +5,6 @@ import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./helpers/ScrollToTop.tsx";
 
 
-
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <ScrollToTop />

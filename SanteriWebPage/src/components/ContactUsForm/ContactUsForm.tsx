@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./ContactUsForm.module.scss";
 import Button from "../Button/Button";
 
-
 export default function ContactUsForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-  const onSubmit = async (event: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
+  
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
-    console.log(formData);
+    const formData = new FormData(event.currentTarget);
+    const apiKey: string | undefined = import.meta.env.VITE_APP_API_KEY;
 
-    formData.append("access_key", "3fe365a5-0b11-40d2-bd22-834d1e7c26e5");
+    if (apiKey) {
+      formData.append("access_key", apiKey);
+    } else {
+      throw new Error("Invalid api key!");
+    }
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -26,12 +45,18 @@ export default function ContactUsForm() {
 
     if (res.success) {
       console.log("Success", res);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     }
   };
 
   return (
     <section className={s.contactUsForm}>
-      <form className={s.formBody} onSubmit={()=>onSubmit}>
+      <form className={s.formBody} onSubmit={onSubmit}>
         <h2 className={s.title}>OTA YHTEYTTÄ</h2>
         <div className={s.formItem}>
           <input
@@ -39,6 +64,8 @@ export default function ContactUsForm() {
             placeholder="nimi"
             type="text"
             name="name"
+            value={formData.name}
+            onChange={handleChange}
             minLength={2}
             required
           />
@@ -49,6 +76,8 @@ export default function ContactUsForm() {
             placeholder="sähköposti"
             type="email"
             name="email"
+            value={formData.email}
+            onChange={handleChange}
             required
           />
         </div>
@@ -58,6 +87,8 @@ export default function ContactUsForm() {
             placeholder="puhelin"
             type="text"
             name="phone"
+            value={formData.phone}
+            onChange={handleChange}
             pattern="[0-9]*"
             required
           />
@@ -67,6 +98,8 @@ export default function ContactUsForm() {
             className={s.formTextarea}
             placeholder="viesti..."
             name="message"
+            value={formData.message}
+            onChange={handleChange}
             minLength={15}
             required
           />
