@@ -46,7 +46,11 @@ export default function Header() {
                   etusivu
                 </NavLink>
               </li>
-              <li className={s.navItem} onMouseOver={() => setIsVisible(true)}>
+              <li
+                className={s.navItem}
+                onMouseEnter={() => setIsVisible(true)}
+                onMouseLeave={() => setIsVisible(false)}
+              >
                 <NavLink className={s.menuLink} to="services">
                   palvelut
                 </NavLink>
@@ -54,8 +58,9 @@ export default function Header() {
                 {isVisible && (
                   <ul
                     className={s.servicesItems}
-                    onMouseLeave={() => setIsVisible(false)}
-                    onClick={() => setIsVisible(false)}
+                    // onMouseOver={() => setIsVisible(true)}
+                    // onMouseLeave={() => setIsVisible(false)}
+                    // onClick={() => setIsVisible(false)}
                   >
                     <li className={s.servicesItem}>
                       <NavLink to="computer-service">tietokone</NavLink>

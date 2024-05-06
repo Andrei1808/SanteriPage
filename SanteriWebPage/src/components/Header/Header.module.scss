@@ -65,12 +65,22 @@
 }
 
 .menuLink {
-  padding-bottom: 40px;
+
 }
 
 .menuLink:hover {
-  padding-bottom: 0.25rem;
-  border-bottom: 0.125rem solid rgba($deep_blue, 0.3);
+  padding-bottom: 1.25rem;
+  position: relative;
+
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 65%;
+    width: 100%;
+    height: 0.125rem;
+    background-color: rgba($deep_blue, 0.3);
+  }
 }
 
 .servicesItem:hover {
