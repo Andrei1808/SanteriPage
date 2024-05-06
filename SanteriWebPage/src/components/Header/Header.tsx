@@ -12,7 +12,7 @@ export default function Header() {
   const handleScroll = () => {
     const currentScrollTop = window.scrollY;
 
-   ( currentScrollTop > lastScrollTop.current) && (currentScrollTop>115)
+    currentScrollTop > lastScrollTop.current && currentScrollTop > 115
       ? setShowScroll(false)
       : setShowScroll(true);
 
@@ -30,7 +30,6 @@ export default function Header() {
         className={clsx({
           [s.header]: true,
           [s.down]: showScroll,
-
         })}
       >
         <div className={s.wrapper}>
@@ -47,17 +46,17 @@ export default function Header() {
                   etusivu
                 </NavLink>
               </li>
-              <li
-                className={s.navItem}
-                onMouseOver={() => setIsVisible(true)}
-                onMouseLeave={() => setIsVisible(false)}
-              >
+              <li className={s.navItem} onMouseOver={() => setIsVisible(true)}>
                 <NavLink className={s.menuLink} to="services">
                   palvelut
                 </NavLink>
 
                 {isVisible && (
-                  <ul className={s.servicesItems}>
+                  <ul
+                    className={s.servicesItems}
+                    onMouseLeave={() => setIsVisible(false)}
+                    onClick={() => setIsVisible(false)}
+                  >
                     <li className={s.servicesItem}>
                       <NavLink to="computer-service">tietokone</NavLink>
                     </li>
