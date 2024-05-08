@@ -11,11 +11,9 @@ export default function Header() {
 
   const handleScroll = () => {
     const currentScrollTop = window.scrollY;
-
     currentScrollTop > lastScrollTop.current && currentScrollTop > 115
-      ? setShowScroll(false)
+      ? (setShowScroll(false), setIsVisible(false))
       : setShowScroll(true);
-
     lastScrollTop.current = currentScrollTop;
   };
 
@@ -56,12 +54,7 @@ export default function Header() {
                 </NavLink>
 
                 {isVisible && (
-                  <ul
-                    className={s.servicesItems}
-                    // onMouseOver={() => setIsVisible(true)}
-                    // onMouseLeave={() => setIsVisible(false)}
-                    // onClick={() => setIsVisible(false)}
-                  >
+                  <ul className={s.servicesItems}>
                     <li className={s.servicesItem}>
                       <NavLink to="computer-service">tietokone</NavLink>
                     </li>
