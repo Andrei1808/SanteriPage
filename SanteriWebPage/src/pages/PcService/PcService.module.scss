@@ -1,0 +1,165 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixin";
+
+.pcService {
+  max-width: $wrapper_max-width;
+  margin: 0 auto;
+  background-color: $main_bg_deep_blue;
+}
+
+.title {
+  @include sectionTitle($dark_yellow);
+}
+
+.servicesItems {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: start;
+  position: relative;
+  flex-basis: calc(100% / 6);
+  height: 60vh;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s;
+
+  &:hover:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  &:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background-color: $dark_yellow;
+    animation: slideDown 0.7s ease forwards;
+    z-index: 1;
+  }
+
+  &:hover {
+    flex-basis: 75%;
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  &:hover .itemTitle {
+    color: $deep_blue;
+    z-index: 1;
+  }
+
+  &:hover .description {
+    z-index: 1;
+    width: 100%;
+    animation: shutter-in-left 0.5s ease forwards;
+    animation-delay: 0.5s;
+  }
+
+  &:hover .price {
+    z-index: 1;
+    width: 100%;
+    animation: shutter-in-right 0.5s ease forwards;
+    animation-delay: 0.9s;
+  }
+}
+
+.itemTitle {
+  writing-mode: vertical-rl;
+  position: relative;
+  font-size: $desktop1440_headings_h6_size;
+  padding: 1rem;
+  color: $foggy_white;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 1rem 1rem;
+  height: 100%;
+}
+
+.description {
+  opacity: 0;
+  width: 0;
+  font-size: $desktop1440_bodyText_body1_size;
+  font-family: $font_family_PoetsenOne;
+  color: $deep_blue;
+}
+
+.price {
+  opacity: 0;
+  position: relative;
+  font-size: 20px;
+  font-weight: $desktop1440_headings_h1_weight;
+  letter-spacing: $letter_spacing_title1;
+  color: $dark_yellow;
+  text-align: right;
+  position: absolute;
+  bottom: 3rem;
+  right: 1rem;
+  font-size: 120px;
+  font-family: $font_family_PoetsenOne;
+  text-shadow: 5px 5px 5px $deep_blue;
+}
+
+.travelCost {
+  font-size: $desktop1440_subtitles_subtitle1_size;
+  font-family: $font_family_PoetsenOne;
+  color: $dark_yellow;
+  padding: 2rem;
+}
+
+// --------------------------------------ANIMATIONS-----------------------------
+
+@keyframes slideDown {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes shutter-in-left {
+  0% {
+    transform: rotateY(100deg);
+    transform-origin: left;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    transform-origin: left;
+    opacity: 1;
+  }
+}
+
+@keyframes shutter-in-right {
+  0% {
+    transform: rotateY(-100deg);
+    transform-origin: right;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    transform-origin: right;
+    opacity: 1;
+  }
+}
