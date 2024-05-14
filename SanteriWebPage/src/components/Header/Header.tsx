@@ -139,7 +139,12 @@ export default function Header() {
                 setIsMenu(!isMenu);
               }}
             >
-              <div className={s.burgerMenu}></div>
+              <div
+                className={clsx({
+                  [s.burgerMenuCross]: isMenu,
+                  [s.burgerMenu]: !isMenu,
+                })}
+              ></div>
             </div>
           )}
         </div>
