@@ -7,19 +7,46 @@ import clsx from "clsx";
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
   const [showScroll, setShowScroll] = useState(true);
+  const [isMenu, setIsMenu] = useState(true);
   const lastScrollTop = useRef(0);
 
   const handleScroll = () => {
     const currentScrollTop = window.scrollY;
-    currentScrollTop > lastScrollTop.current && currentScrollTop > 115
-      ? (setShowScroll(false), setIsVisible(false))
-      : setShowScroll(true);
+    const scrollConditions =
+      currentScrollTop > lastScrollTop.current && currentScrollTop > 115;
+
+    if (scrollConditions && innerWidth > 968) {
+      setShowScroll(false);
+      setIsVisible(false);
+    } else {
+      setShowScroll(true);
+    }
+
     lastScrollTop.current = currentScrollTop;
   };
+
+  const handleResize = () => {
+    if (window.innerWidth > 968) {
+      setIsMenu(true);
+    } else {
+      setIsMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    window.innerWidth > 968 ? setIsMenu(true) : setIsMenu(false);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
@@ -38,51 +65,83 @@ export default function Header() {
           </div>
 
           <div className={s.navigation}>
-            <ul className={s.menu}>
-              <li className={s.navItem}>
-                <NavLink className={s.menuLink} to="home">
-                  etusivu
-                </NavLink>
-              </li>
-              <li
-                className={s.navItem}
-                onMouseEnter={() => setIsVisible(true)}
-                onMouseLeave={() => setIsVisible(false)}
-              >
-                <NavLink className={s.menuLink} to="services">
-                  palvelut
-                </NavLink>
+            {isMenu ? (
+              <ul className={s.menu}>
+                <li
+                  className={s.navItem}
+                  onClick={() =>
+                    window.innerWidth < 968 ? setIsMenu(false) : ""
+                  }
+                >
+                  <NavLink className={s.menuLink} to="home">
+                    etusivu
+                  </NavLink>
+                </li>
+                <li
+                  className={s.navItem}
+                  onClick={() =>
+                    window.innerWidth < 968 ? setIsMenu(false) : ""
+                  }
+                  onMouseEnter={() => {
+                    if (innerWidth > 968) {
+                      setIsVisible(true);
+                    }
+                  }}
+                  onMouseLeave={() => setIsVisible(false)}
+                >
+                  <NavLink className={s.menuLink} to="services">
+                    palvelut
+                  </NavLink>
 
-                {isVisible && (
-                  <ul className={s.servicesItems}>
-                    <li className={s.servicesItem}>
-                      <NavLink to="computer-service">tietokone</NavLink>
-                    </li>
-                    <li className={s.servicesItem}>
-                      <NavLink to="renovation-service">remontti</NavLink>
-                    </li>
-                    <li className={s.servicesItem}>
-                      <NavLink to="cleaning-service">siivous</NavLink>
-                    </li>
-                    <li className={s.servicesItem}>
-                      <NavLink to="yard-service">pihä</NavLink>
-                    </li>
-                    <li className={s.servicesItem}>
-                      <NavLink to="cctv-service">videovalvonta</NavLink>
-                    </li>
-                    <li className={s.servicesItem}>
-                      <NavLink to="photos-service">valokuvaaja</NavLink>
-                    </li>
-                  </ul>
-                )}
-              </li>
-              <li className={s.navItem}>
-                <NavLink className={s.menuLink} to="contacts">
-                  yhteystiedot
-                </NavLink>
-              </li>
-            </ul>
+                  {isVisible && (
+                    <ul className={s.servicesItems}>
+                      <li className={s.servicesItem}>
+                        <NavLink to="computer-service">tietokone</NavLink>
+                      </li>
+                      <li className={s.servicesItem}>
+                        <NavLink to="renovation-service">remontti</NavLink>
+                      </li>
+                      <li className={s.servicesItem}>
+                        <NavLink to="cleaning-service">siivous</NavLink>
+                      </li>
+                      <li className={s.servicesItem}>
+                        <NavLink to="yard-service">pihä</NavLink>
+                      </li>
+                      <li className={s.servicesItem}>
+                        <NavLink to="cctv-service">videovalvonta</NavLink>
+                      </li>
+                      <li className={s.servicesItem}>
+                        <NavLink to="photos-service">valokuvaaja</NavLink>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+                <li className={s.navItem}>
+                  <NavLink
+                    className={s.menuLink}
+                    onClick={() =>
+                      window.innerWidth < 968 ? setIsMenu(false) : ""
+                    }
+                    to="contacts"
+                  >
+                    yhteystiedot
+                  </NavLink>
+                </li>
+              </ul>
+            ) : (
+              " "
+            )}
           </div>
+          {innerWidth < 969 && (
+            <div
+              className={s.burgerMenuContainer}
+              onClick={() => {
+                setIsMenu(!isMenu);
+              }}
+            >
+              <div className={s.burgerMenu}></div>
+            </div>
+          )}
         </div>
       </header>
     )

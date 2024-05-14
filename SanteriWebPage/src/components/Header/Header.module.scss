@@ -15,9 +15,9 @@
   animation: down 0.2s ease;
 }
 
-
 .wrapper {
   width: 100%;
+  height: 100%;
   max-width: $wrapper_max-width;
   margin: 0 auto;
   padding: 1rem 0;
@@ -65,15 +65,13 @@
 }
 
 .menuLink {
-
 }
 
 .menuLink:hover {
   padding-bottom: 1.25rem;
   position: relative;
 
-
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     top: 65%;
@@ -86,6 +84,45 @@
 .servicesItem:hover {
   border-bottom: 0.125rem solid rgba($dark_yellow, 0.3);
 }
+
+
+.burgerMenuContainer{
+  cursor: pointer;
+  padding: 0.625rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burgerMenu {
+  position: relative;
+  width: 2.5rem;
+  height: 0.25rem;
+  background-color: $deep_blue;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.625rem;
+    width: 2.5rem;
+    height: 0.25rem;
+    background-color: $deep_blue;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0.625rem;
+    width: 2.5rem;
+    height: 0.25rem;
+    background-color: $deep_blue;
+  }
+}
+
+
+// -------------------------------ANIMATIONS------------------------------
+
 
 @keyframes down {
   0% {
@@ -105,4 +142,29 @@
   }
 }
 
+// -------------------------------- MEDIA----------------------------------
 
+@media (max-width: 1440px) {
+  .wrapper {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 968px) {
+
+  .burgerMenu {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark_yellow;
+  }
+}
