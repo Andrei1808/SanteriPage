@@ -16,7 +16,7 @@ export const pcServiceData = [
     id: "2",
   },
   {
-    title: "Windows asennuы",
+    title: "Windows asennus",
     price: "80",
     img: "src/assets/images/pc-services-page/windows.jpeg",
     description:
