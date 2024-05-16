@@ -9,43 +9,72 @@
   row-gap: 0.5rem;
 }
 
-.card{
-    border: 0.25rem solid $foggy_white;
-    border-radius: 1rem;
-    position: relative;
-    padding: 4rem 4rem 1rem 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 7rem 0 3rem;
-    cursor: pointer;
+.card {
+  border: 0.25rem solid $foggy_white;
+  border-radius: 1rem;
+  position: relative;
+  padding: 4rem 4rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 7rem 0 3rem;
+  cursor: pointer;
 
-    &:hover{
-        @include hoverShadow($foggy_white)
-    }
+  &:hover {
+    @include hoverShadow($foggy_white);
+  }
 }
 
-.icon{
-    background-color: $dark_yellow;
-    border-radius: 50%;
-    padding: 1rem;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.icon {
+  background-color: $dark_yellow;
+  border-radius: 50%;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.title{
-    font-size: $desktop1440_headings_h5_size;
-    letter-spacing: $letter_spacing_title3;
-    color: $foggy_white;
-    margin: 1.5rem 0;
-
+.title {
+  font-size: $desktop1440_headings_h5_size;
+  letter-spacing: $letter_spacing_title3;
+  color: $foggy_white;
+  margin: 1.5rem 0;
 }
 
-.description{
-     font-size: $desktop1440_subtitles_subtitle2_size;
-    letter-spacing: $letter_spacing_title3;
-    color: $foggy_white;
-    
+.description {
+  font-size: $desktop1440_subtitles_subtitle2_size;
+  letter-spacing: $letter_spacing_title3;
+  color: $foggy_white;
+}
+
+// --------------------- MEDIA ----------------------
+
+@media (max-width: 1140px) {
+  .servicesCard {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    margin: 7rem 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+ .card {
+     padding: 4rem 2rem 1rem;
+  }
+}
+
+
+
+@media (max-width: 645px) {
+  .servicesCard {
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+
+
 }

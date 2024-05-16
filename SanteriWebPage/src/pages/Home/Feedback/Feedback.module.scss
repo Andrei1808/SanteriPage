@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   gap: 4rem;
-  text-align: center;
+
 }
 
 .feedbackItem {
@@ -36,6 +36,7 @@
 .feedbackText {
     position: relative;
     padding-bottom: 2rem;
+
    
 }
 
@@ -43,8 +44,20 @@
   font-size: $desktop1440_subtitles_subtitle1_size;
   font-weight: $desktop1440_subtitles_subtitle1_weight;
   letter-spacing: $letter_spacing_title3;
-  
   position: absolute;
   top: 100%;
+  right: -1rem;
 
 }
+
+
+
+// -----------------------MEDIA-----------------------
+
+
+@media (max-width: 1280px) {
+.feedbackItem {
+  width: 40%;
+}
+}
+

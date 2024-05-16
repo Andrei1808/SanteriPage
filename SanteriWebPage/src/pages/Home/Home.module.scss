@@ -50,3 +50,33 @@
     @include hoverScale($deep_blue, $dark_yellow);
   }
 }
+
+// ---------------MEDIA-------------------
+
+@media (max-width: 992px) {
+   .wrapper {
+    height: calc(100vh - 115px);
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    height: calc(100vh - 115px);
+  }
+
+  .info {
+    gap: 3rem;
+  }
+
+  .title {
+    font-size: $desktop768_headings_h3_size;
+    letter-spacing: $letter_spacing_title3;
+  }
+
+  .phoneNumber {
+    font-size: $desktop768_headings_h2_size;
+    font-weight: $desktop1440_headings_h3_weight;
+    color: $dark_yellow;
+  }
+
+}

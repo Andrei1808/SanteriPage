@@ -4,7 +4,6 @@
 .footer {
   background-color: $dark_yellow;
   padding-top: 2rem;
-
 }
 
 .wrapper {
@@ -53,4 +52,26 @@
   align-items: center;
   justify-content: center;
   color: #727272;
+}
+
+// ------------------- MEDIA -----------------------------
+
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column;
+    margin: 0 2rem;
+    gap: 1rem;
+  }
+
+  .email,
+  .phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .areasList {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
