@@ -75,3 +75,20 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 540px) {
+  .email,
+  .phone,
+  .area {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info {
+    gap: 2rem;
+  }
+
+  .areasList {
+    justify-content: center;
+  }
+}

@@ -62,12 +62,10 @@
 }
 
 @media (max-width: 768px) {
- .card {
-     padding: 4rem 2rem 1rem;
+  .card {
+    padding: 4rem 2rem 1rem;
   }
 }
-
-
 
 @media (max-width: 645px) {
   .servicesCard {
@@ -76,6 +74,14 @@
     width: 80%;
     margin: 0 auto;
   }
+}
+
+@media (max-width: 400px) {
+
+  .card {
+  padding: 4rem 1rem 1rem;
 
 
+
+}
 }

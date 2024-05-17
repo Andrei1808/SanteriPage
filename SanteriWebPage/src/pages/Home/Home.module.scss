@@ -54,7 +54,7 @@
 // ---------------MEDIA-------------------
 
 @media (max-width: 992px) {
-   .wrapper {
+  .wrapper {
     height: calc(100vh - 115px);
   }
 }
@@ -78,5 +78,18 @@
     font-weight: $desktop1440_headings_h3_weight;
     color: $dark_yellow;
   }
-
 }
+
+@media (max-width: 576px) {
+  .info {
+    margin: 2rem;
+    text-align: start;
+  }
+}
+
+@media (max-width: 470px) {
+  .phoneNumber {
+    font-size: $desktop768_headings_h3_size;
+  }
+}
+

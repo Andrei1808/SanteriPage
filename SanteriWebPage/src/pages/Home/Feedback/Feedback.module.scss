@@ -36,8 +36,6 @@
 .feedbackText {
     position: relative;
     padding-bottom: 2rem;
-
-   
 }
 
 .feedbackAuthor {
@@ -59,5 +57,19 @@
 .feedbackItem {
   width: 40%;
 }
+}
+
+@media (max-width: 576px) {
+.feedbackItems {
+flex-direction: column;
+align-items: center;
+justify-content: center;
+  gap: 1rem;
+}
+
+.feedbackItem {
+    width: 80%;
+}
+
 }
 

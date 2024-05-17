@@ -56,7 +56,24 @@
     font-size: $desktop768_bodyText_body1_size;
   }
 
-   .parallaxContainer {
-    height:83vh;
+  .parallaxContainer {
+    height: 83vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .parallaxContainer {
+    height: 100vh;
+  }
+
+  .description {
+    font-size: $desktop768_bodyText_body1_size;
+    text-align: center;
+  }
+}
+
+@media (max-width: 470px) {
+  .description {
+    font-size: $desktop768_bodyText_body2_size;
   }
 }
