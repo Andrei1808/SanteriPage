@@ -3,7 +3,7 @@
 
 .feedback {
   max-width: $wrapper_max-width;
-  background-color: rgba($foggy_white, .9);
+  background-color: rgba($foggy_white, 0.9);
   color: $deep_blue;
   padding-bottom: 5rem;
 }
@@ -16,7 +16,6 @@
   display: flex;
   justify-content: center;
   gap: 4rem;
-
 }
 
 .feedbackItem {
@@ -29,13 +28,13 @@
   padding-top: 5rem;
 }
 
-.icon{
-    font-size: $desktop1440_headings_h2_size;
+.icon {
+  font-size: $desktop1440_headings_h2_size;
 }
 
 .feedbackText {
-    position: relative;
-    padding-bottom: 2rem;
+  position: relative;
+  padding-bottom: 2rem;
 }
 
 .feedbackAuthor {
@@ -45,31 +44,31 @@
   position: absolute;
   top: 100%;
   right: -1rem;
-
 }
-
-
 
 // -----------------------MEDIA-----------------------
 
-
 @media (max-width: 1280px) {
-.feedbackItem {
-  width: 40%;
-}
+  .feedbackItem {
+    width: 40%;
+  }
 }
 
 @media (max-width: 576px) {
-.feedbackItems {
-flex-direction: column;
-align-items: center;
-justify-content: center;
-  gap: 1rem;
-}
+  .feedbackItems {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
 
-.feedbackItem {
+  .feedbackItem {
     width: 80%;
+  }
 }
 
+@media (max-width: 470px) {
+  .feedbackText {
+    font-size: $desktop768_bodyText_body3_size;
+  }
 }
-

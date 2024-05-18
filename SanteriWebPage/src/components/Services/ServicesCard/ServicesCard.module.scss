@@ -76,12 +76,15 @@
   }
 }
 
-@media (max-width: 400px) {
-
-  .card {
-  padding: 4rem 1rem 1rem;
-
-
-
+@media (max-width: 470px) {
+  .description {
+    font-size: $desktop768_bodyText_body3_size;
+  }
 }
+
+
+@media (max-width: 400px) {
+  .card {
+    padding: 4rem 1rem 1rem;
+  }
 }

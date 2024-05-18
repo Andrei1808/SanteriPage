@@ -80,16 +80,42 @@
   }
 }
 
+@media (max-width: 670px) {
+  .title {
+    font-size: $desktop768_headings_h4_size;
+  }
+    .phoneNumber {
+    font-size: $desktop576_headings_h3_size;
+  }
+}
+
 @media (max-width: 576px) {
   .info {
     margin: 2rem;
     text-align: start;
   }
+
+    .title {
+    font-size: $desktop768_headings_h4_size;
+  }
 }
 
 @media (max-width: 470px) {
   .phoneNumber {
-    font-size: $desktop768_headings_h3_size;
+    font-size: $desktop576_headings_h3_size;
   }
 }
 
+@media (max-width: 400px) {
+  .title {
+    font-size: $desktop576_headings_h3_size;
+  }
+  .phoneNumber {
+    font-size: $desktop576_headings_h4_size;
+  }
+
+  .phoneNumberBtn {
+    font-size: $desktop768_bodyText_body3_size;
+    padding: 1rem 2rem;
+  }
+}
