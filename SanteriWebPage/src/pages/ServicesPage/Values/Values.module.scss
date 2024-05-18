@@ -52,6 +52,12 @@
   }
 }
 
+.valuesContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
 .valuesDescription {
   color: ($dark_yellow);
   font-size: $desktop1440_subtitles_subtitle1_size;
@@ -86,5 +92,30 @@
     opacity: 1;
     transform: rotateX(0deg);
     transform-origin: top;
+  }
+}
+
+// -----------------------MEDIA-----------------------
+
+@media (max-width: 768px) {
+  .valuesItem {
+    font-size: $desktop768_headings_h4_size;
+  }
+}
+
+@media (max-width: 576px) {
+  .valuesItem {
+    font-size: $desktop576_headings_h4_size;
+  }
+
+  .valuesDescription {
+    font-size: $desktop576_subtitles_subtitle1_size;
+    padding: 1rem 0 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .valuesItem {
+    font-size: $desktop576_headings_h6_size;
   }
 }
