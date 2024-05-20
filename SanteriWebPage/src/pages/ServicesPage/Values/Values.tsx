@@ -21,12 +21,13 @@ export default function Values() {
             className={s.valuesItem}
             onClick={() => clickHandler(index)}
           >
-            <h4 className={s.itemTitle}>
-             - {value.title}
+            <div className={s.valuesContainer}>
+              <h4 className={s.itemTitle}>{value.title}</h4>
               <span>
                 {elemIndex === index ? <IoIosArrowDown /> : <IoIosArrowUp />}
               </span>
-            </h4>
+            </div>
+
             {elemIndex === index ? (
               <p
                 className={clsx(s.valuesDescription, {
