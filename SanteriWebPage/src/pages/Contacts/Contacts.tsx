@@ -11,7 +11,7 @@ export default function Contacts() {
     <section className={s.contacts}>
       <div className={s.container}>
         <div className={s.contactsItems}>
-          <div className={s.title}>yhteystiedot</div>
+          <h2 className={s.title}>yhteystiedot</h2>
           <div className={s.contactsItem}>
             <NavLink className={s.contactsItem} to="tel:+358 (50) 554-52-05">
               <span className={s.icon}>

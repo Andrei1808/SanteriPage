@@ -2,7 +2,6 @@
 @import "../../styles/mixin";
 
 .contactUsForm {
-
 }
 
 .formBody {
@@ -57,4 +56,18 @@
 
 .formTextarea {
   resize: none;
+}
+
+// --------------MEDIA-------------------
+
+@media (max-width: 1050px) {
+  .title {
+    padding: 5rem 0 3rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .formItem {
+    width: 90%;
+  }
 }
