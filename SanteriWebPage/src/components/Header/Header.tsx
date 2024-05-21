@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import s from "./Header.module.scss";
 import logo from "../../assets/images/logo.png";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
@@ -94,7 +95,12 @@ export default function Header() {
                   </NavLink>
 
                   {isVisible && (
-                    <ul className={s.servicesItems}>
+                    <motion.ul
+                      initial={{ opacity: 0, y: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.7 }}
+                      className={s.servicesItems}
+                    >
                       <li className={s.servicesItem}>
                         <NavLink to="computer-service">tietokone</NavLink>
                       </li>
@@ -113,7 +119,7 @@ export default function Header() {
                       <li className={s.servicesItem}>
                         <NavLink to="photos-service">valokuvaaja</NavLink>
                       </li>
-                    </ul>
+                    </motion.ul>
                   )}
                 </li>
                 <li className={s.navItem}>
