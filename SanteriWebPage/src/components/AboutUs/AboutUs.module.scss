@@ -28,13 +28,16 @@
   @include sectionTitle($dark_yellow);
 }
 
+.descriptionContainer{
+  display: flex;
+  justify-content: center;
+}
+
 .description {
   width: 80%;
-  margin: 0 auto;
   font-size: $desktop1440_subtitles_subtitle1_size;
   letter-spacing: $letter_spacing_title3;
   color: $foggy_white;
-
   line-height: $desktop1440_bodyText_body2_lineHeight;
   text-align: justify;
 }

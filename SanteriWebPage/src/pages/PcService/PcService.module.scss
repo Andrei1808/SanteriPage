@@ -12,119 +12,55 @@
 }
 
 .servicesItems {
-  display: flex;
-  width: 100%;
-  gap: 0.5rem;
-  padding: 1rem;
 }
 
 .serviceItem {
-  display: flex;
-  align-items: start;
+  width: 80%;
   position: relative;
-  flex-basis: calc(100% / 6);
-  height: 60vh;
-  overflow: hidden;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: all 0.5s;
+  margin: 2rem 1rem 2rem;
+  padding-bottom: 1rem;
 
-  &:hover:after {
+  &:before {
     content: "";
+    width: 105%;
+    height: 0.125rem;
     position: absolute;
-    top: 0;
     bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-
-  &:hover:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 10%;
-    height: 100%;
     background-color: $dark_yellow;
-    animation: slideDown 0.7s ease forwards;
-    z-index: 1;
-  }
-
-  &:hover {
-    flex-basis: 75%;
-    justify-content: start;
-    align-items: flex-start;
-  }
-
-  &:hover .itemTitle {
-    color: $deep_blue;
-    z-index: 1;
-  }
-
-  &:hover .description {
-    z-index: 1;
-    width: 100%;
-    animation: shutter-in-left 0.5s ease forwards;
-    animation-delay: 0.5s;
-  }
-
-  &:hover .price {
-    z-index: 1;
-    width: 100%;
-    animation: shutter-in-right 0.5s ease forwards;
-    animation-delay: 0.9s;
   }
 }
 
 .itemTitle {
-  writing-mode: vertical-rl;
-  position: relative;
-  font-size: $desktop1440_headings_h6_size;
-  padding: 1rem;
-  color: $foggy_white;
+  font-size: $desktop1440_headings_h4_size;
+  font-family: $font_family_PoetsenOne;
+  letter-spacing: $letter_spacing_title2;
+  color: $dark_yellow;
+  margin-bottom: 1rem;
 }
 
 .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 3rem 1rem 1rem;
-  height: 100%;
+  font-size: $desktop1440_bodyText_body1_size;
+  font-family: $font_family_PoetsenOne;
+  color: $foggy_white;
 }
 
 .description {
-  opacity: 0;
-  width: 0;
-  font-size: $desktop1440_bodyText_body1_size;
-  font-family: $font_family_PoetsenOne;
-  color: $deep_blue;
 }
 
 .price {
-  opacity: 0;
-  position: relative;
-  font-size: 20px;
-  font-weight: $desktop1440_headings_h1_weight;
-  letter-spacing: $letter_spacing_title1;
-  color: $dark_yellow;
-  text-align: right;
   position: absolute;
-  bottom: 3rem;
-  right: 1rem;
-  font-size: 120px;
+  left: 105%;
+  bottom: 0;
+  font-size: $desktop1440_headings_h2_size;
   font-family: $font_family_PoetsenOne;
-  text-shadow: 5px 5px 5px $deep_blue;
+  color: $dark_yellow;
 }
 
 .travelCost {
-  font-size: $desktop1440_subtitles_subtitle1_size;
+  padding-top: 3rem;
+  font-size: $desktop1440_headings_h4_size;
   font-family: $font_family_PoetsenOne;
   color: $dark_yellow;
-  padding: 2rem;
 }
 
 // --------------------------------------ANIMATIONS-----------------------------
@@ -161,5 +97,17 @@
     transform: rotateY(0);
     transform-origin: right;
     opacity: 1;
+  }
+}
+
+// ----------------------------------------MEDIA-------------------------------------------
+
+@media (max-width: 980px) {
+  .servicesItems {
+    flex-flow: column;
+  }
+
+  .serviceItem {
+    flex-basis: 20vh;
   }
 }
