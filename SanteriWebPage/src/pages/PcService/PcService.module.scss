@@ -102,12 +102,63 @@
 
 // ----------------------------------------MEDIA-------------------------------------------
 
-@media (max-width: 980px) {
-  .servicesItems {
-    flex-flow: column;
+@media (max-width: 768px) {
+  .itemTitle {
+    font-size: $desktop768_headings_h4_size;
   }
 
+  .price {
+    font-size: $desktop768_headings_h2_size;
+  }
+
+  .info {
+    font-size: $desktop768_bodyText_body3_size;
+  }
+
+  .travelCost {
+    font-size: $desktop768_headings_h4_size;
+  }
+}
+
+@media (max-width: 600px) {
   .serviceItem {
-    flex-basis: 20vh;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 1.5rem 1rem;
+
+    &:before {
+      content: "";
+      width: 90%;
+      height: 0.125rem;
+      position: absolute;
+      bottom: -2.5rem;
+      background-color: $dark_yellow;
+    }
+  }
+
+  .price {
+    position: absolute;
+    left: 50%;
+    bottom: -2rem;
+    transform: translate(-50%);
+  }
+
+  .serviceItem:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  .travelCost {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .title {
+    font-size: $desktop576_headings_h2_size;
+  }
+  .travelCost {
+    font-size: $desktop576_headings_h5_size;
+    margin-top: 2rem;
   }
 }
