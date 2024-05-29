@@ -1,0 +1,65 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixin";
+
+.cctv {
+  max-width: $wrapper_max-width;
+  margin: 0 auto;
+  background-color: $main_bg_deep_blue;
+}
+
+.contentContainer {
+}
+
+.videoPlayer {
+  width: 100%;
+}
+
+.title {
+  @include sectionTitle($dark_yellow);
+}
+
+.infoItem {
+  padding-bottom: 2rem;
+}
+
+.infoTitle {
+  @include subTitle($dark_yellow);
+  margin: 2rem;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: $dark_yellow;
+  }
+}
+
+.info {
+  width: 85%;
+  margin: 0 auto;
+  font-size: $desktop1440_subtitles_subtitle2_size;
+  font-family: $font_family_PoetsenOne;
+  color: $foggy_white;
+}
+
+
+.cardsContainer{
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+
+
+// ---------------------------------MEDIA-------------------------
+
+@media (max-width: 1400px) {
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
