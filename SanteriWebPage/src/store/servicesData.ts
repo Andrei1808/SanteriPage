@@ -42,7 +42,7 @@ export const services = [
     icon: "src/assets/icons/cctv.png",
     img: "src/assets/images/services-page/cctv.jpg",
     id: "5",
-    route: "/cctv",
+    route: "/cctv-service",
   },
   {
     title: "Valokuvaajapalvelu",

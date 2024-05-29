@@ -31,7 +31,7 @@ export const xeomaCardsData = [
     title: "Xeoma Starter",
     subtitle: " videovalvontamatkasi alku",
     description:
-      "Xeoma Starter on ihanteellinen lähtökohta videovalvontajärjestelmien aloittelijoille. Jos määrität N(!, esimerkiksi 9€), saat",
+      "Xeoma Starter on ihanteellinen lähtökohta videovalvontajärjestelmien aloittelijoille. Jos määrität N(esimerkiksi 9€), saat",
     services: [
       "Ilmainen brändäys ja räätälöinti",
       "Etäjärjestelmänvalvojan käyttöoikeus ja mahdollisuus katsella jopa 1000 kameraa reaaliajassa",
@@ -40,6 +40,7 @@ export const xeomaCardsData = [
       "Tallennus kahdesta videolähteestä arkistoon ja enintään 3 moduulia ketjussa",
       "Arkistointi jopa 5 päivää",
     ],
+    bg: "rgba(4, 92, 180, .8)",
   },
   {
     title: "Xeoma Lite",
@@ -52,6 +53,7 @@ export const xeomaCardsData = [
       "Rajoittamaton arkisto",
       "PTZ-kameran ohjaus",
     ],
+    bg: "rgba(207, 0, 0, .8)",
   },
   {
     title: "Xeoma Standard",
@@ -65,6 +67,7 @@ export const xeomaCardsData = [
       "Kehittyneet PTZ-ohjaustoiminnot, digitaalinen zoom ja paljon muuta",
       "Ilmainen testaus demolisenssillä",
     ],
+    bg: "rgba(212, 194, 0, .8)",
   },
   {
     title: "Xeoma Pro",
@@ -79,5 +82,6 @@ export const xeomaCardsData = [
       "LDAP-tuki, sähköinen pohjapiirroskartta ja monia eksklusiivisia ominaisuuksia",
       "Ilmainen testaus demolisenssillä",
     ],
+    bg: "rgba(4, 200, 0, .8)",
   },
 ];
