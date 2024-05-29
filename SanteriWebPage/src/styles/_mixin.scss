@@ -46,3 +46,15 @@
     padding-bottom: 3rem;
   }
 }
+
+@mixin subTitle($color) {
+  font-size: $desktop1440_headings_h3_size;
+  font-weight: $desktop1440_subtitles_subtitle1_weight;
+  letter-spacing: $letter_spacing_title3;
+  font-family: $font_family_PoetsenOne;
+  text-transform: capitalize;
+  color: $color;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
