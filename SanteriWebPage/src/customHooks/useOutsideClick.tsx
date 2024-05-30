@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function outsideClick(initialIsVisible: boolean) {
   const [isVisible, setIsVisible] = useState(initialIsVisible);

@@ -1,4 +1,3 @@
-import React from "react";
 import ServicesCard from "./ServicesCard/ServicesCard";
 import s from "./Services.module.scss";
 

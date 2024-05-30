@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import s from "./Values.module.scss";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { valuesData } from "../../../store/valuesData";

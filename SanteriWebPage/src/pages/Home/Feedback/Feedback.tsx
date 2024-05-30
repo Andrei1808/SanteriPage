@@ -1,4 +1,3 @@
-import React from "react";
 import s from "./Feedback.module.scss";
 import { VscFeedback } from "react-icons/vsc";
 import { motion } from "framer-motion";

@@ -1,4 +1,3 @@
-import React from "react";
 import s from "./PcService.module.scss";
 import { pcServiceData } from "../../store/pcServiceData";
 

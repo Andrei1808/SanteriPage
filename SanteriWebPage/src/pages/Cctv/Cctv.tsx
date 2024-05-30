@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import s from "./Cctv.module.scss";
 import { xeomaData } from "../../store/xeomaData";
 import CctvCards from "./CctvCards/CctvCards";

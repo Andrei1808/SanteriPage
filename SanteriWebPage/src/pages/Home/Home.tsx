@@ -1,4 +1,3 @@
-import React from "react";
 import s from "./Home.module.scss";
 import { NavLink } from "react-router-dom";
 import Button from "../../components/Button/Button";
