@@ -59,13 +59,53 @@
 // --------------------------MEDIA-------------------------
 
 @media (max-width: 1400px) {
-
   .cctvCards {
     width: 100%;
   }
 
-  .description{
+  .description {
     width: 75%;
-margin: 0 auto;
+    margin: 0 auto;
   }
+}
+
+@media (max-width: 750px) {
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+    width: 75%;
+    gap: 3rem;
+  }
+
+  .description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: $desktop576_headings_h3_size;
+  }
+
+  .description {
+    font-size: $desktop576_subtitles_subtitle1_size;
+  }
+}
+
+@media (max-width: 350px) {
+  .title {
+    font-size: $desktop576_headings_h4_size;
+  }
+
+  .description,
+  .serviceItem {
+    font-size: $desktop576_subtitles_subtitle2_size;
+  }
+
+  .cctvCards {
+  height: 550px;
+
+
+}
 }
