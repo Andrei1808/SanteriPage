@@ -1,0 +1,60 @@
+@import "../styles/constants.scss";
+
+@mixin button_big($color, $bg) {
+  display: flex;
+  font-family: $font_family_PoetsenOne;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: $letter_spacing_title2;
+  background-color: $bg;
+  color: $color;
+  font-size: $button_big_size;
+  font-weight: $desktop1440_subtitles_subtitle1_weight;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 3rem;
+  border-radius: 1.25rem;
+}
+
+@mixin hoverScale($color, $bg) {
+  background-color: $bg;
+  color: $color;
+  transition-duration: 0.25s;
+  scale: 0.95;
+}
+
+@mixin hoverShadow($color) {
+  box-shadow: 0px 0px 20px $color;
+  transition-duration: 0.2s;
+  scale: 0.97;
+}
+
+@mixin sectionTitle($color) {
+  font-size: $desktop1440_headings_h2_size;
+  font-weight: $desktop1440_subtitles_subtitle1_weight;
+  letter-spacing: $letter_spacing_title2;
+  font-family: $font_family_PoetsenOne;
+  text-transform: uppercase;
+  color: $color;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+
+  @media (max-width: 768px) {
+    font-size: $desktop768_headings_h2_size;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@mixin subTitle($color) {
+  font-size: $desktop1440_headings_h3_size;
+  font-weight: $desktop1440_subtitles_subtitle1_weight;
+  letter-spacing: $letter_spacing_title3;
+  font-family: $font_family_PoetsenOne;
+  text-transform: capitalize;
+  color: $color;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  position: relative;
+}

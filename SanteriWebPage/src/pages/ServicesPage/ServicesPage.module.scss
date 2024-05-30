@@ -1,0 +1,78 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixin";
+
+.title {
+  @include sectionTitle($dark_yellow);
+}
+
+.subtitle {
+  font-size: $desktop1440_subtitles_subtitle1_size;
+  color: $foggy_white;
+  letter-spacing: $letter_spacing_title2;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.servicesPage {
+  max-width: $wrapper_max-width;
+  margin: 0 auto;
+  background-color: $main_bg_deep_blue;
+}
+
+.ourWish {
+  padding-bottom: 4rem;
+}
+
+.wishText {
+  font-family: $font_family_Dancing_Script;
+  font-size: $desktop1440_headings_h2_size;
+  text-transform: capitalize;
+  color: $dark_yellow;
+  text-align: center;
+  position: relative;
+}
+
+.caption {
+  font-family: $font_family_Dancing_Script;
+  font-size: $desktop1440_subtitles_subtitle1_size;
+  text-transform: capitalize;
+  color: $dark_yellow;
+  position: absolute;
+  bottom: -1.5rem;
+}
+
+// -----------------------MEDIA-----------------------
+
+@media (max-width: 1100px) {
+  .subtitle {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wishText {
+    font-size: $desktop768_headings_h3_size;
+  }
+
+  .caption {
+    font-size: $desktop768_bodyText_body2_size;
+  }
+}
+
+@media (max-width: 576px) {
+  .subtitle {
+    font-size: $desktop576_headings_h5_size;
+  }
+
+  .caption {
+    right: 50%;
+    top: 100%;
+   transform: translate(50%);
+  }
+}
+
+@media (max-width: 430px) {
+  .subtitle {
+    font-size: $desktop576_headings_h6_size;
+  }
+}

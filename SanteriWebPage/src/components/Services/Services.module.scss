@@ -1,0 +1,20 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixin";
+
+.services {
+  padding: 1rem 1rem 2rem;
+  background-color: rgba($deep_blue, 0.9);
+}
+
+.title {
+  @include sectionTitle($dark_yellow);
+}
+
+// --------------MEDIA----------------------------------------
+
+@media (max-width: 400px) {
+  .services {
+    padding: 1rem 0 2rem;
+
+  }
+}

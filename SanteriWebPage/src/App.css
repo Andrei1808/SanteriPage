@@ -1,0 +1,48 @@
+@import "../src/styles/constants.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+input:focus{
+   outline: none;
+}
+
+div:focus{
+    outline: none;
+ }
+
+ button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+ }
+ 
+
+ .layout{
+    background-image: url("../../assets/images/main-bg.jpg");
+}

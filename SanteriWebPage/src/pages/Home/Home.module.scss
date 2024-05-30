@@ -1,0 +1,121 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixin";
+
+.home {
+  max-width: $wrapper_max-width;
+  margin: 0 auto;
+}
+.wrapper {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../../assets/images/a38016_925a0d8e71a44716a65d95ec04e80fe6.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-transform: uppercase;
+  margin: 3rem;
+}
+
+.title {
+  color: $foggy_white;
+  font-size: $desktop1440_headings_h3_size;
+  letter-spacing: $letter_spacing_title2;
+}
+
+.phoneNumber {
+  font-size: $desktop1440_headings_h2_size;
+  font-weight: $desktop1440_headings_h3_weight;
+  color: $dark_yellow;
+}
+
+.phoneNumberBtn {
+  @include button_big($dark_yellow, $deep_blue);
+  font-size: $desktop1440_headings_h5_size;
+  font-weight: $desktop1440_headings_h5_weight;
+
+  a {
+    font-family: $font_family_PoetsenOne;
+  }
+
+  &:hover {
+    @include hoverScale($deep_blue, $dark_yellow);
+  }
+}
+
+// ---------------MEDIA-------------------
+
+@media (max-width: 992px) {
+  .wrapper {
+    height: calc(100vh - 115px);
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    height: calc(100vh - 115px);
+  }
+
+  .info {
+    gap: 3rem;
+  }
+
+  .title {
+    font-size: $desktop768_headings_h3_size;
+    letter-spacing: $letter_spacing_title3;
+  }
+
+  .phoneNumber {
+    font-size: $desktop768_headings_h2_size;
+    font-weight: $desktop1440_headings_h3_weight;
+    color: $dark_yellow;
+  }
+}
+
+@media (max-width: 670px) {
+  .title {
+    font-size: $desktop768_headings_h4_size;
+  }
+    .phoneNumber {
+    font-size: $desktop576_headings_h3_size;
+  }
+}
+
+@media (max-width: 576px) {
+  .info {
+    margin: 2rem;
+    text-align: start;
+  }
+
+    .title {
+    font-size: $desktop768_headings_h4_size;
+  }
+}
+
+@media (max-width: 470px) {
+  .phoneNumber {
+    font-size: $desktop576_headings_h3_size;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: $desktop576_headings_h3_size;
+  }
+  .phoneNumber {
+    font-size: $desktop576_headings_h4_size;
+  }
+
+  .phoneNumberBtn {
+    font-size: $desktop768_bodyText_body3_size;
+    padding: 1rem 2rem;
+  }
+}

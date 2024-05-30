@@ -1,0 +1,125 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixin";
+
+.parallaxContainer {
+  height: 80vh;
+  width: 100%;
+  background-image: url("../../assets/images/aboutsus-bg.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 3rem 1rem;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  @include sectionTitle($dark_yellow);
+}
+
+.descriptionContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  width: 80%;
+  font-size: $desktop1440_subtitles_subtitle1_size;
+  letter-spacing: $letter_spacing_title3;
+  color: $foggy_white;
+  line-height: $desktop1440_bodyText_body2_lineHeight;
+  text-align: justify;
+}
+
+// ---------------------------------------------MEDIA-----------------------------------------------
+
+@media (max-width: 1070px) {
+  .parallaxContainer {
+    height: 100vh;
+  }
+
+  .description {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .description {
+    font-size: $desktop768_bodyText_body1_size;
+  }
+
+  .parallaxContainer {
+    height: 83vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .parallaxContainer {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 576px) {
+    .description {
+    font-size: $desktop768_bodyText_body2_size;
+  }
+
+  .parallaxContainer {
+    height: 100vh;
+  }
+
+
+}
+
+@media (max-width: 470px) {
+  .parallaxContainer {
+    height: 110vh;
+  }
+
+  .description {
+    font-size: $desktop768_bodyText_body3_size;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .parallaxContainer {
+    height: 135vh;
+  }
+
+  .description {
+    font-size: $desktop768_bodyText_body3_size;
+  }
+}
+
+@media (max-width: 330px) {
+  .parallaxContainer {
+    height: 150vh;
+  }
+}
+
+
+
+@media (max-height: 670px) {
+.parallaxContainer {
+  height: 150vh;
+
+}
+}
+
+@media (max-height: 500px) {
+.parallaxContainer {
+  height: 200vh;
+
+}
+}
