@@ -51,6 +51,7 @@
 @media (max-width: 1280px) {
   .feedbackItem {
     width: 40%;
+     padding-left: 1rem;
   }
 }
 
@@ -64,6 +65,7 @@
 
   .feedbackItem {
     width: 80%;
+    padding-left: 1rem;
   }
 }
 
@@ -71,4 +73,5 @@
   .feedbackText {
     font-size: $desktop768_bodyText_body3_size;
   }
+
 }
