@@ -19,6 +19,7 @@
   align-items: center;
   margin: 7rem 0 3rem;
   cursor: pointer;
+  font-family: $font_family_Gill-Sans;
 
   &:hover {
     @include hoverShadow($foggy_white);
@@ -75,8 +76,8 @@
     margin: 0 auto;
   }
 
-  .card{
-        min-height: 440px;
+  .card {
+    min-height: 440px;
   }
 }
 
@@ -85,7 +86,6 @@
     font-size: $desktop768_bodyText_body3_size;
   }
 }
-
 
 @media (max-width: 400px) {
   .card {
