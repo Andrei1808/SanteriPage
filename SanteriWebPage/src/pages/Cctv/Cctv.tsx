@@ -1,13 +1,14 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import s from "./Cctv.module.scss";
 import { xeomaData } from "../../store/xeomaData";
 import CctvCards from "./CctvCards/CctvCards";
 
 export default function Cctv() {
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
+
   };
 
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function Cctv() {
           data-autoplay-portrait={true}
           data-autoplay-mobile={true}
           data-play-on-hover={false}
-          src="../../src/assets/video/xeoma.mp4"
+          src="/assets/video/xeoma.mp4"
           loop
         ></video>
       )}

@@ -6,7 +6,6 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Feedback from "./Feedback/Feedback";
 
 
-
 export default function Home() {
   return (
     <section className={s.home}>
@@ -23,7 +22,6 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      
       <Services />
       <AboutUs />
       <Feedback />
