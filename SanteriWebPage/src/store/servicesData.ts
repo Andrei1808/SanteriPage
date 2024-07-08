@@ -9,12 +9,21 @@ export const services = [
     route: "/computer-service",
   },
   {
+    title: "Videovalvontapalvelu",
+    description:
+      "Luo luotettavuutta ja turvallisuutta tilaasi ammattitaitoisilla valvontajärjestelmien asennus- ja huoltopalveluillamme. Tarjoamme kattavia ratkaisuja kotisi, yrityksesi tai toimistosi suojaamiseksi, varmistaen korkean laadun ja luotettavuuden jokaisessa näkökulmassa.",
+    icon: "/assets/icons/cctv.png",
+    img: "/assets/images/services-page/cctv.jpg",
+    id: "2",
+    route: "/cctv-service",
+  },
+  {
     title: "Remonttipalvelu",
     description:
       " Kokoelma palveluitamme sisältää kaiken mitä tarvitset tilasi päivittämiseen: huonekalujen korjaamisesta ja verhoilusta aina asunnon remonttiin.",
     icon: "/assets/icons/renovation.png",
     img: "/assets/images/services-page/renovation.jpg",
-    id: "2",
+    id: "3",
     route: "/renovation",
   },
   {
@@ -23,7 +32,7 @@ export const services = [
       " Tiimimme tarjoaa laajan valikoiman siivouspalveluita erilaisiin tiloihin. Koosta ja haastavuudesta riippumatta olemme valmiita takaamaan tilasi puhtauden ja raikkauden. Luota meihin huolehtimaan kodistasi, toimistostasi tai mistä tahansa muusta paikasta, ja saat korkealaatuista palvelua ja moitteetonta tulosta.",
     icon: "/assets/icons/cleaning.png",
     img: "/assets/images/services-page/cleaning.jpg",
-    id: "3",
+    id: "4",
     route: "/cleaning",
   },
   {
@@ -32,17 +41,8 @@ export const services = [
       " Anna pihan aina kukoistaa puhtaudesta ja viihtyisyydestä huolehtivien ammattilaistemme avulla. Säästä ja säästä riippumatta olemme valmiita muuttamaan pihasi houkuttelevaksi ja hoidetuksi paikaksi. Luota meille pihan hoitoon, ja saat täydellisen järjestyksen ja moitteettoman ulkonäön.",
     icon: "/assets/icons/outside.png",
     img: "/assets/images/services-page/yard.jpg",
-    id: "4",
-    route: "/yard",
-  },
-  {
-    title: "Videovalvontapalvelu",
-    description:
-      "Luo luotettavuutta ja turvallisuutta tilaasi ammattitaitoisilla valvontajärjestelmien asennus- ja huoltopalveluillamme. Tarjoamme kattavia ratkaisuja kotisi, yrityksesi tai toimistosi suojaamiseksi, varmistaen korkean laadun ja luotettavuuden jokaisessa näkökulmassa.",
-    icon: "/assets/icons/cctv.png",
-    img: "/assets/images/services-page/cctv.jpg",
     id: "5",
-    route: "/cctv-service",
+    route: "/yard",
   },
   {
     title: "Valokuvaajapalvelu",
