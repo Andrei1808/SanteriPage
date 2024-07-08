@@ -27,7 +27,7 @@
   @include sectionTitle($dark_yellow);
 }
 
-.descriptionContainer{
+.descriptionContainer {
   display: flex;
   justify-content: center;
 }
@@ -60,6 +60,7 @@
 
   .parallaxContainer {
     height: 83vh;
+    background-attachment: initial;
   }
 }
 
@@ -70,15 +71,13 @@
 }
 
 @media (max-width: 576px) {
-    .description {
+  .description {
     font-size: $desktop768_bodyText_body2_size;
   }
 
   .parallaxContainer {
     height: 100vh;
   }
-
-
 }
 
 @media (max-width: 470px) {
@@ -90,7 +89,6 @@
     font-size: $desktop768_bodyText_body3_size;
   }
 }
-
 
 @media (max-width: 400px) {
   .parallaxContainer {
@@ -108,18 +106,14 @@
   }
 }
 
-
-
 @media (max-height: 670px) {
-.parallaxContainer {
-  height: 150vh;
-
-}
+  .parallaxContainer {
+    height: 150vh;
+  }
 }
 
 @media (max-height: 500px) {
-.parallaxContainer {
-  height: 200vh;
-
-}
+  .parallaxContainer {
+    height: 200vh;
+  }
 }
