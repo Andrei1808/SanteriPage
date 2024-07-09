@@ -1,4 +1,3 @@
-import React from "react";
 import { services } from "../../../store/servicesData";
 import s from "./ServicesCard.module.scss";
 import { motion } from "framer-motion";

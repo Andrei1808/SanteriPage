@@ -1,4 +1,3 @@
-import React from "react";
 import s from "./ServicesPageCards.module.scss";
 import { services } from "../../../store/servicesData";
 import { NavLink } from "react-router-dom";

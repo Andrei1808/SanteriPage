@@ -1,4 +1,3 @@
-import React from "react";
 import s from "./ServicesPage.module.scss";
 import ServicesPageCards from "./ServicesPageCards/ServicesPageCards";
 import Values from "./Values/Values";

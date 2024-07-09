@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import s from "./Header.module.scss";
 import logo from "../../assets/images/logo.png";
@@ -105,6 +105,9 @@ export default function Header() {
                         <NavLink to="computer-service">tietokone</NavLink>
                       </li>
                       <li className={s.servicesItem}>
+                        <NavLink to="cctv-service">videovalvonta</NavLink>
+                      </li>
+                      <li className={s.servicesItem}>
                         <NavLink to="renovation-service">remontti</NavLink>
                       </li>
                       <li className={s.servicesItem}>
@@ -112,9 +115,6 @@ export default function Header() {
                       </li>
                       <li className={s.servicesItem}>
                         <NavLink to="yard-service">pihä</NavLink>
-                      </li>
-                      <li className={s.servicesItem}>
-                        <NavLink to="cctv-service">videovalvonta</NavLink>
                       </li>
                       <li className={s.servicesItem}>
                         <NavLink to="photos-service">valokuvaaja</NavLink>

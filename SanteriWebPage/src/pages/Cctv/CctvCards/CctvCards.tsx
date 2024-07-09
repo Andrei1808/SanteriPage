@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import s from "./CctvCards.module.scss";
 import { xeomaCardsData } from "../../../store/xeomaData";
 import { motion } from "framer-motion";

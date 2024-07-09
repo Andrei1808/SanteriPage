@@ -1,4 +1,3 @@
-import React from 'react'
 import s from "./AboutUs.module.scss"
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";

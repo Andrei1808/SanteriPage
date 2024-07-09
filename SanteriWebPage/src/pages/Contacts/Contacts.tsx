@@ -1,4 +1,3 @@
-import React from "react";
 import s from "./Contacts.module.scss";
 import ContactUsForm from "../../components/ContactUsForm/ContactUsForm";
 import { FiPhone } from "react-icons/fi";

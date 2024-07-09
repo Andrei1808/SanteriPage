@@ -1,11 +1,9 @@
-import React from "react";
 import s from "./Home.module.scss";
 import { NavLink } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Services from "../../components/Services/Services";
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Feedback from "./Feedback/Feedback";
-
 
 
 export default function Home() {
@@ -24,7 +22,6 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      
       <Services />
       <AboutUs />
       <Feedback />
